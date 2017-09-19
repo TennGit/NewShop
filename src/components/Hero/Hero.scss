@@ -1,0 +1,13 @@
+@import '../../assets/scss/styles.scss';
+
+.hero {
+  margin-bottom: $base-margin;
+
+  @media #{$large-up} {
+    margin-top: $base-margin;
+  }
+
+  .wrapper {
+    display: flex;
+  }
+}

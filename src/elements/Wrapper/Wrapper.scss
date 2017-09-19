@@ -1,0 +1,9 @@
+@import '../../assets/scss/styles.scss';
+
+.wrapper {
+  margin: 0 auto;
+  @include step-scale('padding-left', 0px, 0px, $base-unit)
+  @include step-scale('padding-right', 0px, 0px, $base-unit)
+  width: auto;
+  max-width: 1199px;
+}

@@ -1,0 +1,101 @@
+/* debugging */
+
+/* including this mixin highlights the component that you add it to. */
+@mixin debug($color: $eastern-blue, $important: false) {
+  @if $important {
+    * {
+      // sass-lint:disable no-important
+      background: rgba($color, 0.05) !important;
+      // sass-lint:enable no-important
+    }
+  } @else {
+    * {
+      background: rgba($color, 0.05);
+    }
+  }
+}
+
+/* clearfix */
+
+/* clears any stray floats */
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+/* step scale */
+
+/* Allows you to easily add different values for 1 property according to screen size */
+
+@mixin step-scale($property, $small-value, $medium-value: $small-value, $large-value: $medium-value, $xlarge-value: $large-value) {
+  & {
+    #{$property}: $small-value;
+
+    /* medium up */
+    @media screen and (min-width: 768px) {
+      #{$property}: $medium-value;
+    }
+
+    /* large up */
+    @media screen and (min-width: 1024px) {
+      #{$property}: $large-value;
+    }
+
+    /* xlarge up */
+    @media screen and (min-width: 1200px) {
+      #{$property}: $xlarge-value;
+    }
+  }
+}
+
+/* shapes */
+
+/* set the element shape to be a circle */
+
+@mixin circle($width) {
+  border-radius: 100%;
+  width: $width;
+  height: $width;
+}
+
+/* set the element shape to be a square */
+
+@mixin square($width) {
+  width: $width;
+  height: $width;
+}
+
+/* set the element width and height in a single line of scss */
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+/* render button */
+
+/* makes the element look like a button. This is mostly usefull for buttons and the occasional link that needs to look like a button */
+
+@mixin render-button($color, $background-color, $inset-color, $hover-color, $hover-background-color, $hover-shadow) {
+  color: $color;
+  background-color: $background-color;
+  box-shadow: $inset-color;
+
+  &:hover, &:active, &:focus {
+    color: $hover-color;
+    background-color: $hover-background-color;
+    box-shadow: $inset-color, $hover-background-color;
+  }
+}
+
+@mixin translateY($p) {
+  transform: translateY($p);
+}
+
+@mixin trasition($p) {
+  transition: $p;
+}

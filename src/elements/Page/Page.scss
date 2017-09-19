@@ -1,0 +1,8 @@
+@import '../../assets/scss/styles.scss';
+
+/* page */
+
+.page {
+  @include step-scale('margin-top', 100px, 111px, 111px)
+  display: block;
+}

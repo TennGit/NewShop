@@ -1,0 +1,5 @@
+
+/* set the svg path properties to inherit if you want to be able to style them through the <use> element */
+[id^='icons'] path, [id^='sprites'] path {
+  fill: inherit;
+}

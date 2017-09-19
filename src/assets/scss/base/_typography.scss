@@ -1,0 +1,62 @@
+// sass-lint:disable no-vendor-prefixes
+
+/* base typography */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  color: $base-color;
+  line-height: $base-line-height;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  font-style: normal;
+}
+
+/* selection */
+
+::-moz-selection {
+  color: $base-selection-color;
+  background-color: $base-selection-background-color;
+  text-shadow: none;
+}
+
+::selection {
+  color: $base-selection-color;
+  background-color: $base-selection-background-color;
+  text-shadow: none;
+}
+
+/* external font import */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+/* links */
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  /* hover, active, focus */
+
+  &:hover, &:active, &:focus {
+    color: $link-hover-color;
+  }
+
+}
+
+/* headings */
+h3 {
+  font-size: $heading-h3-size;
+}
+
+h4 {
+  font-size: $heading-h4-size;
+}
