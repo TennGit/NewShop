@@ -1,0 +1,13 @@
+@import '../../assets/scss/styles.scss';
+
+/* panel */
+
+.panel {
+  padding: $base-unit;
+  background-color: $panel-background-color;
+  border-bottom: 1px solid $base-border-color;
+
+  .ie10 & {
+    width: 100%;
+  }
+}
